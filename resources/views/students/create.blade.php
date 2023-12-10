@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #31304D;">
     @include('layouts.app')
 
     <!-- @section('content') -->
@@ -50,7 +50,7 @@
     <!-- resources/views/students/create.blade.php -->
 
 @auth
-<div class="container mt-4">
+<div class="container mt-4 text-white">
     <h1>Add Student</h1>
 
     @if(session('success'))
@@ -77,7 +77,7 @@
             <input type="text" name="phone" class="form-control" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Student</button>
+        <button type="submit" class="btn btn-danger">Add Student</button>
     </form>
 </div>
 
