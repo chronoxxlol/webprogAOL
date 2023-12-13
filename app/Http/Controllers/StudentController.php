@@ -12,16 +12,18 @@ use Illuminate\Support\Facades\Auth;
 class StudentController extends Controller
 {
     
-    public function index(Request $request)
-{
+    public function index(Request $request, $sortOrder = 'desc')
+    {
     $searchQuery = $request->input('query');
 
-    $students = Student::latest()->when($searchQuery, function ($query) use ($searchQuery) {
-        $query->where('name', 'like', '%' . $searchQuery . '%');
-    })->paginate(20);
+    $students = Student::when($searchQuery, function ($query) use ($searchQuery) {
+            $query->where('name', 'like', '%' . $searchQuery . '%');
+        })
+        ->orderBy('name', $sortOrder)
+        ->paginate(50);
 
-    return view('students.index', compact('students', 'searchQuery'));
-}
+    return view('students.index', compact('students', 'searchQuery', 'sortOrder'));
+    }
 
     public function create()
     {

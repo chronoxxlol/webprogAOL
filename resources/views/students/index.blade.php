@@ -24,6 +24,14 @@
             </div>
         </form>
 
+        <div class="d-flex justify-content-between mb-3">
+            <div>
+                <strong>Sort Order:</strong>
+                <a href="{{ route('students.index', ['sortOrder' => 'asc', 'query' => $searchQuery]) }}" class="{{ $sortOrder === 'asc' ? 'font-weight-bold' : '' }}">A-Z</a> |
+                <a href="{{ route('students.index', ['sortOrder' => 'desc', 'query' => $searchQuery]) }}" class="{{ $sortOrder === 'desc' ? 'font-weight-bold' : '' }}">Z-A</a>
+            </div>
+        </div>
+
         @if($students && count($students) > 0)
             <div class="row">
                 @foreach($students as $student)
