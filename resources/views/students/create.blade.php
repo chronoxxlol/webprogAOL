@@ -9,46 +9,6 @@
 <body style="background-color: #31304D;">
     @include('layouts.app')
 
-    <!-- @section('content') -->
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('welcome') }}">Home</a>
-    
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    @auth
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('students.index') }}">Student List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('students.create') }}">Add Student</a>
-                        </li>
-                        <li class="nav-item">
-                            <form action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <button type="submit" class="btn btn-link nav-link">Logout</button>
-                            </form>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Login</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Register</a>
-                            </li>
-                        @endif
-                    @endauth
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-    
-    <!-- @endsection -->
-
-    <!-- resources/views/students/create.blade.php -->
-
 @auth
 <div class="container mt-4 text-white">
     <div class="container mt-5">

@@ -43,7 +43,7 @@
 </body>
 </html> --}}
 
-<!doctype html>
+{{-- <!doctype html>
 <html lang="en">
     <style>
         body {
@@ -114,4 +114,4 @@
             crossorigin="anonymous"
         ></script>
     </body>
-</html>
+</html> --}}
